@@ -1,0 +1,620 @@
+/* =============================================
+   COFFEE SHOP SPA - MAIN STYLES
+   ============================================= */
+
+:root {
+  --bg-color: #f0ae88;
+  --text-color: #fff;
+  --main-color: #7c2e28;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--main-color);
+}
+
+/* =============================================
+   HEADER & NAVIGATION
+   ============================================= */
+
+.custom-bg {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color);
+}
+
+.logo img {
+  height: 60px !important;
+  width: auto !important;
+  object-fit: contain;
+  display: block;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+header nav.nav-link:hover {
+  color: #7c2e28 !important;
+}
+
+.text-main {
+  color: var(--main-color) !important;
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+
+.btn-primary {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--bg-color);
+  border-color: var(--bg-color);
+  color: var(--main-color);
+}
+
+.btn-outline-primary {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  color: white;
+}
+
+.btn-outline {
+  background-color: var(--bg-color);
+}
+
+/* =============================================
+   CARDS
+   ============================================= */
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(124 46 40 / 0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  color: var(--main-color);
+}
+
+/* =============================================
+   TYPOGRAPHY
+   ============================================= */
+
+h1, h2, h3, h4, h5 {
+  color: var(--main-color);
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+
+.footer {
+  background-color: var(--main-color) !important;
+  color: var(--text-color);
+}
+
+.footer h5 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.footer .d-flex a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.footer .d-flex a:hover {
+  color: var(--bg-color);
+}
+
+/* =============================================
+   CART ICON & BADGE
+   ============================================= */
+
+#cart-icon-btn {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#cart-icon-btn:hover {
+  transform: scale(1.1);
+  background-color: var(--main-color) !important;
+  color: white !important;
+}
+
+#cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #dc3545 !important;
+  color: white;
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: cartUpdate 0.3s ease-in-out;
+}
+
+@keyframes cartUpdate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* =============================================
+   MENU SECTION
+   ============================================= */
+
+.menu-section .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-section .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.menu-section .card-body .d-flex {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.add-to-cart-icon {
+  background-color: transparent !important;
+  border-color: var(--main-color) !important;
+  color: var(--main-color) !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  border-width: 2px !important;
+}
+
+.add-to-cart-icon:hover {
+  background-color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  color: white !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 4px 12px rgba(124, 46, 40, 0.3) !important;
+}
+
+/* =============================================
+   ORDER PAGE - COFFEE SELECTION
+   ============================================= */
+
+.coffee-horizontal-list {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.coffee-item-horizontal {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #e9ecef;
+  transition: background-color 0.2s ease;
+}
+
+.coffee-item-horizontal:last-child {
+  border-bottom: none;
+}
+
+.coffee-item-horizontal:hover {
+  background-color: #f8f9fa;
+}
+
+.coffee-thumbnail {
+  width: 80px;
+  height: 80px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.coffee-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.coffee-details {
+  flex: 1;
+  margin-right: 16px;
+}
+
+.coffee-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 4px 0;
+}
+
+.coffee-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #dc3545;
+  margin: 0;
+}
+
+.quantity-control-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-control-horizontal .quantity-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dee2e6;
+  background-color: #fff;
+  color: #495057;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quantity-control-horizontal .quantity-btn:hover:not(:disabled) {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  color: white;
+}
+
+.quantity-control-horizontal .quantity-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity-control-horizontal .quantity-btn-delete {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dc3545;
+  background-color: #fff;
+  color: #dc3545;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 4px;
+}
+
+.quantity-control-horizontal .quantity-btn-delete:hover:not(:disabled) {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+.quantity-control-horizontal .quantity-btn-delete:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.quantity-control-horizontal .quantity-input {
+  width: 60px;
+  height: 32px;
+  text-align: center;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Remove up/down arrows from number input */
+.quantity-control-horizontal .quantity-input::-webkit-outer-spin-button,
+.quantity-control-horizontal .quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-control-horizontal .quantity-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* =============================================
+   ORDER PAGE - CUSTOMER INFO
+   ============================================= */
+
+.coffee-selection-container,
+.customer-info-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(124, 46, 40, 0.1);
+}
+
+.section-title {
+  color: var(--main-color);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.customer-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(124, 46, 40, 0.1);
+}
+
+/* =============================================
+   ORDER PAGE - CART SUMMARY
+   ============================================= */
+
+.cart-summary-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(124, 46, 40, 0.15);
+}
+
+.cart-header {
+  background: var(--main-color);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.cart-title {
+  margin: 0;
+  font-weight: 700;
+  color: white;
+}
+
+.cart-body {
+  padding: 1.5rem;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #6c757d;
+}
+
+.empty-cart i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+  background: #e9ecef;
+  transform: translateX(4px);
+}
+
+.cart-item-name {
+  margin: 0;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.cart-item-price {
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.cart-totals {
+  border-top: 2px solid #e9ecef;
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.total-final {
+  border-top: 1px solid #dee2e6;
+  padding-top: 0.75rem;
+  font-size: 1.1rem;
+  color: var(--main-color);
+}
+
+.cart-actions {
+  border-top: 2px solid #e9ecef;
+  padding-top: 1rem;
+}
+
+.btn-checkout {
+  padding: 0.875rem 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-checkout:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 46, 40, 0.3);
+}
+
+/* =============================================
+   FEEDBACK FORM
+   ============================================= */
+
+.feedback-container {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(124, 46, 40, 0.1);
+}
+
+.rating-stars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.rating-stars label {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #dee2e6;
+  transition: all 0.2s ease;
+}
+
+.rating-stars label:hover {
+  color: #ffc107;
+  transform: scale(1.1);
+}
+
+.rating-stars label i.bxs-star {
+  color: #ffc107;
+}
+
+.form-section {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-section:last-child {
+  border-bottom: none;
+}
+
+/* =============================================
+   AUTH PAGES
+   ============================================= */
+
+.auth-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(124, 46, 40, 0.1);
+}
+
+.auth-form-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--main-color);
+}
+
+/* =============================================
+   RESPONSIVE DESIGN
+   ============================================= */
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .coffee-item-horizontal {
+    padding: 12px;
+  }
+
+  .coffee-thumbnail {
+    width: 60px;
+    height: 60px;
+    margin-right: 12px;
+  }
+
+  .customer-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-summary-card.sticky-top {
+    position: static !important;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .coffee-selection-container,
+  .customer-info-section,
+  .feedback-container {
+    padding: 1rem;
+  }
+}
+
+/* =============================================
+   UTILITY CLASSES
+   ============================================= */
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+
